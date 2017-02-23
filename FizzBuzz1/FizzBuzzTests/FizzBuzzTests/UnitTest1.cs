@@ -28,6 +28,32 @@ namespace FizzBuzzTests
 
 
 
+        /// <summary>
+        /// really high level text check - this will be the last to pass
+        /// </summary>
+        [TestMethod]
+        public void TestMethodTopLevelLuckyWithCounts()
+        {
+            FizzLibrary.Fizzer fizzer = new FizzLibrary.LuckyFizzer();
+
+            var response = fizzer.GoFizzWithCount(1, 20);
+
+            Assert.AreEqual("1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz", response);
+
+            //GoFizzWithCount needs to return a collection of types and counts within the response object...decided at this point the complexity warants a proper object
+
+            Assert.AreEqual(4,response.GetTypeCount(FizzLibrary.Model.FizzBuzzType.Type.Fizz));
+            Assert.AreEqual(3, response.GetTypeCount(FizzLibrary.Model.FizzBuzzType.Type.Buzz));
+            Assert.AreEqual(1, response.GetTypeCount(FizzLibrary.Model.FizzBuzzType.Type.FizzBuzz));
+            Assert.AreEqual(2, response.GetTypeCount(FizzLibrary.Model.FizzBuzzType.Type.Lucky));
+            Assert.AreEqual(10, response.GetTypeCount(FizzLibrary.Model.FizzBuzzType.Type.Integer));
+
+        }
+
+
+
+
+
 
 
         /// <summary>
