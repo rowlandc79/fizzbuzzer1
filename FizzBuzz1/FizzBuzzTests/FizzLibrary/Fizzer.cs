@@ -22,15 +22,15 @@ namespace FizzLibrary
             for (int i=startNum; i<= endNum; i++)
             {
                 if (myFizz == "")
-                    myFizz = GetAFizz(i);
+                    myFizz = GetFizzBuzzResponse(i);
                 else
-                    myFizz += " " + GetAFizz(i);
+                    myFizz += " " + GetFizzBuzzResponse(i);
             }
 
             return myFizz;
         }
 
-        public string GetAFizz(int num)
+        public string GetFizzBuzzResponse(int num)
         {
             return num.ToString();
         }
