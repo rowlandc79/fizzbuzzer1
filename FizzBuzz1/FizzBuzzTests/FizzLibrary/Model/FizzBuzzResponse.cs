@@ -8,7 +8,7 @@ namespace FizzLibrary.Model
 {
     public class FizzBuzzResponse
     {
-        public Dictionary<Model.FizzBuzzType.Type, int> TypesIndex;
+        public Dictionary<Model.FizzBuzzType.Type, int> TypesIndex { get; set; }
 
         public string Value { get; set; }
 

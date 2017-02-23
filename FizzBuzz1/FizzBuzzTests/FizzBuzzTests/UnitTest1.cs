@@ -38,7 +38,7 @@ namespace FizzBuzzTests
 
             var response = fizzer.GoFizzWithCount(1, 20);
 
-            Assert.AreEqual("1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz", response);
+            Assert.AreEqual("1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz", response.Value);
 
             //GoFizzWithCount needs to return a collection of types and counts within the response object...decided at this point the complexity warants a proper object
 
