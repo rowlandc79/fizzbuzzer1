@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FizzLibrary
 {
-    public class Fizzer
+    public abstract class Fizzer
     {
 
         /// <summary>
