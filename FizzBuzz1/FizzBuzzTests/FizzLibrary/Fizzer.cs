@@ -30,7 +30,7 @@ namespace FizzLibrary
             return myFizz;
         }
 
-        public string GetFizzBuzzResponse(int num)
+        public virtual string GetFizzBuzzResponse(int num)
         {
             string fizz = GetFizz(num);
             string buzz = GetBuzz(num);
