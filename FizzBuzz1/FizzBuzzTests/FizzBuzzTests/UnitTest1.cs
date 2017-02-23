@@ -57,7 +57,6 @@ namespace FizzBuzzTests
 
             Assert.AreEqual("buzz", fizzer.GetFizzBuzzResponse(5));
             Assert.AreEqual("buzz", fizzer.GetFizzBuzzResponse(10));
-            Assert.AreEqual("buzz", fizzer.GetFizzBuzzResponse(15));  //careful here...once fizzbuzz is done, this one should fail
             Assert.AreEqual("buzz", fizzer.GetFizzBuzzResponse(20));
         }
 
