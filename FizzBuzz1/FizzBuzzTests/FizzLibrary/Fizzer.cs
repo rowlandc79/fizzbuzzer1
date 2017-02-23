@@ -9,10 +9,30 @@ namespace FizzLibrary
     public class Fizzer
     {
 
+        /// <summary>
+        /// Loops from startNum to endNum, calling GetAFizz for each item
+        /// </summary>
+        /// <param name="startNum"></param>
+        /// <param name="endNum"></param>
+        /// <returns></returns>
         public string GoFizz(int startNum, int endNum)
         {
-            throw new NotImplementedException();
+            string myFizz = "";
+
+            for (int i=startNum; i<= endNum; i++)
+            {
+                if (myFizz == "")
+                    myFizz = GetAFizz(i);
+                else
+                    myFizz += " " + GetAFizz(i);
+            }
+
+            return myFizz;
         }
 
+        public string GetAFizz(int num)
+        {
+            return num.ToString();
+        }
     }
 }
