@@ -32,7 +32,31 @@ namespace FizzLibrary
 
         public string GetFizzBuzzResponse(int num)
         {
-            return num.ToString();
+            string fizz = GetFizz(num);
+            string buzz = GetBuzz(num);
+            string fizzbuzz = GetFizzBuzz(num);
+
+            if (fizzbuzz != "")
+                return fizzbuzz;
+            if ((fizz + buzz + fizzbuzz) == "")
+                return num.ToString();
+            else
+                return (fizz + buzz + fizzbuzz);
         }
+
+        public string GetFizz(int num)
+        {
+            return (num % 3 == 0) ? "fizz" : "";
+        }
+        public string GetBuzz(int num)
+        {
+            return (num % 5 == 0) ? "buzz" : "";
+        }
+        public string GetFizzBuzz(int num)
+        {
+            return (num % 15 == 0) ? "fizzbuzz" : "";
+        }
+
+
     }
 }

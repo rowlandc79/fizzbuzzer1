@@ -29,7 +29,7 @@ namespace FizzBuzzTests
 
             Assert.AreEqual("7", fizzer.GetFizzBuzzResponse(7));
 
-            Assert.AreEqual("12", fizzer.GetFizzBuzzResponse(12));
+            Assert.AreEqual("13", fizzer.GetFizzBuzzResponse(13));
         }
 
 
